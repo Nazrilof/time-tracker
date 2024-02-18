@@ -1,0 +1,82 @@
+@import './base.css';
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+}
+
+h1.green, a {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid hsla(160, 100%, 37%, 1);
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  color: hsla(160, 100%, 37%, 1);
+  cursor: pointer;
+
+  &:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+
+  &:disabled {
+    color: hsla(160, 100%, 37%, 0.5);
+    border-color: hsla(160, 100%, 37%, 0.5);
+
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  &.green {
+    background-color: hsla(160, 100%, 37%, 1);
+    color: white;
+    padding: 0.5rem 1rem;
+
+    &:hover {
+      background-color: hsla(160, 100%, 37%, 0.8);
+      border-color: hsla(160, 100%, 37%, 0.8);
+    }
+  }
+}
+
+input {
+  border: 1px solid hsla(160, 100%, 37%, 1);
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px hsla(160, 100%, 37%, 0.5);
+  }
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+}
